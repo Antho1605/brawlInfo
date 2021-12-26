@@ -13,7 +13,8 @@ class IndexController extends AbstractController{
      * @Route("/")
      */
     public function index(BrawlStarsAPIService $bsApi): Response{
-        dd($bsApi->fetchBrawlersInformation());
-        return $this->render('index.html.twig');
+        return $this->render('index.html.twig', [
+            'brawlers' => $bsApi->fetchBrawlersInformation()
+        ]);
     } 
 }
