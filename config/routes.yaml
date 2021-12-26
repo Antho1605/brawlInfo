@@ -1,0 +1,7 @@
+index:
+    path: /
+    controller: App\Controller\IndexController::index
+
+brawlers: 
+    path: /brawlers
+    controller: App\Controller\BrawlersController::show
