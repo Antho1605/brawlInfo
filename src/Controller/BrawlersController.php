@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class BrawlersController extends AbstractController{
 
     /**
-     * @Route("/brawlers")
+     * @Route("/brawlers", name="brawlers")
      */
     public function show(BrawlStarsAPIService $bsApi): Response{
         return $this->render('brawlers.html.twig', [
