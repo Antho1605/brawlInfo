@@ -14,7 +14,7 @@ class BrawlersController extends AbstractController{
      */
     public function show(BrawlStarsAPIService $bsApi): Response{
         return $this->render('brawlers.html.twig', [
-            'brawlers' => $bsApi->fetchBrawlersInformation()
+            'brawlers' => $bsApi->fetchBrawlersInformation()["items"]
         ]);
     }
 }

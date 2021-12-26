@@ -3,5 +3,11 @@
     <body>
         <h1>Brawlers</h1>
         <a href="{{ path('index') }}">Home</a>
+        <h2>List</h2>
+        <ul>
+            {% for brawler in brawlers %}
+                <li>{{ brawler.name }}</li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
